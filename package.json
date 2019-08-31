@@ -1,0 +1,24 @@
+{
+    "name": "HubFileRenamer",
+    "version": "1.0.0",
+    "description": "HUB video file renamer tool that adheres to strict metadata tagging.",
+    "main": "./index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jbpkp07/HUBFileRenamer.git"
+    },
+    "author": "Jeremy Barnes",
+    "license": "ISC",
+    "devDependencies": {
+        "electron": "^6.0.4",
+        "electron-packager": "^14.0.4"
+    },
+    "dependencies": {
+        "jquery": "^3.4.1"
+    },
+    "scripts": {
+        "start": "electron .",
+        "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+        "package-win": "electron-packager . --overwrite --platform=win32  --arch=x64 --icon=assets/icons/win/icon.ico  --prune=true --out=release-builds"
+    }
+}
