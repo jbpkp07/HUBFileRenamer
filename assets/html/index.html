@@ -8,38 +8,40 @@
 
     <title>Hub File Renamer v1.0</title>
 
-    <script>
-        // window.$ = window.jQuery = require('jquery');
-        window.$ = require('jquery');
-    </script>
+    <script> window.$ = require('jquery'); </script>
+    <script id="ViewControllerJS"></script>
 
-    <link rel="stylesheet" href="../css/reset.css" type="text/css">
-    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link id="resetCSS" rel="stylesheet" type="text/css">
+    <link id="styleCSS" rel="stylesheet" type="text/css">
 
 </head>
 
 <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
 
-    <div id="openFileBTN"
-        style="width: 100px; background: lightblue; text-align: center; margin-top: 50px; padding: 10px; border: 2px solid black; border-radius: 10px;">
-        Open File
+    <div id=titleBar class="drag">
+        <img id="spafaxLogo" src="../images/spafaxLogo.png">
+        <div id="title">
+            <span id="titleText">hub file renamer</span>
+            <span id="version">v1.0</span>
+        </div>
+        <div id="windowBtnsBox">
+            <div id="minimizeBtn" class="titleBarBtn nodrag">-</div>
+            <div id="maximizeBtn" class="titleBarBtn nodrag">+</div>
+            <div id="closeBtn" class="titleBarBtn nodrag">x</div>
+        </div>
     </div>
 
-
-    <script src="../javascript/classes/ViewController.js"></script>
+    <div id="openFileBtn" class="btn">Open File</div>
 
     <script>
         $(document).ready(() => {
 
-            const viewController = new ViewController();
+            addEventListener("ViewControllerJS-defined", () => {
+
+                const viewController = new ViewController();
+            });
         });
     </script>
-
-
 </body>
 
 </html>

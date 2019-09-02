@@ -8,7 +8,7 @@ class HubFileRenamerConfig {
 
     constructor() {
 
-        this.openDevTools = true;
+        this.openDevTools = false;
 
         this.platform = process.platform;
 
@@ -20,9 +20,17 @@ class HubFileRenamerConfig {
         
         this.preloadJSPath = path.join(this.assetsPath, "javascript/preload.js");
 
+        this.viewControllerJSPath = path.join(this.assetsPath, "javascript/classes/ViewController.js");
+
+        this.utilityJSPath = path.join(this.assetsPath, "javascript/classes/Utility.js");
+
         this.indexHTMLPath = path.join(this.assetsPath, "html/index.html");
 
-        this.mainWindowConfigOBJ = this.getMainWindowConfigOBJ();
+        this.resetCSSPath = path.join(this.assetsPath, "css/reset.css");
+
+        this.styleCSSPath = path.join(this.assetsPath, "css/style.css");
+
+        this.mainWindowConfigOBJ = this.getMainWindowConfigOBJ();        
     }
 
     getAssetsDirectoryPath() {
@@ -48,12 +56,15 @@ class HubFileRenamerConfig {
 
         const configOBJ =
         {
+            devTools: this.openDevTools,
+            zoomFactor: 1.0,
+            opacity: 0.0,
             width: 1680,
             height: 1050,
             show: false,
             darkTheme: true,
             autoHideMenuBar: true,
-            // frame: false,
+            frame: false,
             webPreferences:
             {
                 nodeIntegration: true,
