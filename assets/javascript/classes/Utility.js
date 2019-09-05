@@ -1,5 +1,5 @@
 "use strict";
-/* global moment */
+/* global module */
 
 
 class Utility {

@@ -3,7 +3,7 @@
 
 const webFrame = require('electron').webFrame;
 
-const HubFileRenamerConfig = require('./classes/HubFileRenamerConfig.js');
+const HubFileRenamerConfig = require('../classes/HubFileRenamerConfig.js');
 
 
 window.onload = () => {
@@ -22,17 +22,17 @@ function configureHTMLDoc() {
     
     const config = new HubFileRenamerConfig();
 
-    const resetCSSElement = $("#resetCSS");
+    $("#resetCSS").attr("href", config.resetCSSPath);
 
-    const styleCSSElement = $("#styleCSS");
+    $("#styleCSS").attr("href", config.styleCSSPath);
 
-    const viewControllerElement = $("#ViewControllerJS");
+    $("#requireJquery").attr("src", config.requireJqueryJSPath);
 
-    $(resetCSSElement).attr("href", config.resetCSSPath);
+    $("#utilityJS").attr("src", config.utilityJSPath);
 
-    $(styleCSSElement).attr("href", config.styleCSSPath);
+    $("#viewControllerJS").attr("src", config.viewControllerJSPath);
 
-    $(viewControllerElement).attr("src", config.viewControllerJSPath);
+    $("#startViewController").attr("src", config.startViewControllerJSPath);
 }
 
 

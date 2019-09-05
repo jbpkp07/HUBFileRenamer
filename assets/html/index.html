@@ -8,9 +8,6 @@
 
     <title>Hub File Renamer v1.0</title>
 
-    <script> window.$ = require('jquery'); </script>
-    <script id="ViewControllerJS"></script>
-
     <link id="resetCSS" rel="stylesheet" type="text/css">
     <link id="styleCSS" rel="stylesheet" type="text/css">
 
@@ -31,17 +28,13 @@
         </div>
     </div>
 
-    <div id="openFileBtn" class="btn">Open File</div>
+    <div id="openFileBtn" class="btn">open file</div>
 
-    <script>
-        $(document).ready(() => {
+    <script id="requireJquery" type="text/javascript"></script>
+    <script id="utilityJS" type="text/javascript"></script>
+    <script id="viewControllerJS" type="text/javascript"></script>
+    <script id="startViewController"type="text/javascript"></script>
 
-            addEventListener("ViewControllerJS-defined", () => {
-
-                const viewController = new ViewController();
-            });
-        });
-    </script>
 </body>
 
 </html>

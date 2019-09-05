@@ -3,7 +3,6 @@
 
 const remote = require('electron').remote;
 const dialog = remote.dialog;
-
 const fs = require('fs');
 
 
@@ -112,8 +111,3 @@ class ViewController {
         });
     }
 }
-
-
-module.exports = ViewController;
-
-dispatchEvent(new CustomEvent("ViewControllerJS-defined"));

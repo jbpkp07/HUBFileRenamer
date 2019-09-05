@@ -9,28 +9,26 @@ class HubFileRenamerConfig {
     constructor() {
 
         this.openDevTools = false;
-
         this.platform = process.platform;
 
         this.assetsPath = this.getAssetsDirectoryPath();
 
+        //Electron app config section------------------------------------------
         this.hubFileRenamerJSPath = path.join(this.assetsPath, "javascript/classes/HubFileRenamer.js");
-
         this.appWindowJSPath = path.join(this.assetsPath, "javascript/classes/AppWindow.js");
-        
-        this.preloadJSPath = path.join(this.assetsPath, "javascript/preload.js");
-
-        this.viewControllerJSPath = path.join(this.assetsPath, "javascript/classes/ViewController.js");
-
         this.utilityJSPath = path.join(this.assetsPath, "javascript/classes/Utility.js");
-
         this.indexHTMLPath = path.join(this.assetsPath, "html/index.html");
 
+        //Preload web config section-------------------------------------------
+        this.preloadJSPath = path.join(this.assetsPath, "javascript/functions/preload.js");
         this.resetCSSPath = path.join(this.assetsPath, "css/reset.css");
-
         this.styleCSSPath = path.join(this.assetsPath, "css/style.css");
+        this.requireJqueryJSPath = path.join(this.assetsPath, "javascript/functions/requireJquery.js");
+        this.viewControllerJSPath = path.join(this.assetsPath, "javascript/classes/ViewController.js");
+        this.startViewControllerJSPath = path.join(this.assetsPath, "javascript/functions/startViewController.js");
 
-        this.mainWindowConfigOBJ = this.getMainWindowConfigOBJ();        
+        //Electron app window config-------------------------------------------
+        this.mainWindowConfigOBJ = this.getMainWindowConfigOBJ();
     }
 
     getAssetsDirectoryPath() {

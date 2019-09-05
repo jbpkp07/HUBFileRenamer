@@ -14,8 +14,13 @@
 }
 
 @font-face {
-    font-family: 'Roboto';
+    font-family: 'Roboto-Light';
     src: url('../fonts/Roboto-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
 }
 
 * {
@@ -36,8 +41,8 @@ html {
 body {
     background: var(--dark-gray);
     color: var(--light-white);
-    font-family: 'Roboto', sans-serif;
-    font-size: 12pt;
+    font-family: 'Roboto-Light', sans-serif;
+    font-size: 10pt;
     height: 100%;
     margin: 0;
     overflow-x: hidden;
@@ -52,7 +57,7 @@ body {
     height: 30px;
     width: 100%;
 
-    font-weight: 600;
+  
 
     position: fixed;
     top: 0;
@@ -81,14 +86,21 @@ body {
 #title {
     margin: 0 auto;
     width: fit-content;
-    /* font-size: 14pt; */
+   
     position: relative;
     top: 8px;
+   
+    /* font-weight: 600; */
+}
+
+#titleText {
+    font-size: 12pt;
+    font-family: 'Roboto-Regular', sans-serif;
 }
 
 #version {
     color: var(--dark-white);
-    font-size: 10pt;
+    font-size: 8pt;
 }
 
 #windowBtnsBox {
@@ -118,14 +130,13 @@ body {
 
 
 .btn{
-    float:right;
     background: var(--medium-gray);
     border: 2px solid var(--medium-purple);
     border-radius: 10px;
     margin-top: 50px;
-    padding: 100px;
+    padding: 10px;
     text-align: center; 
-    width: 100px; 
+    width: fit-content; 
     margin-left: 30px;
 }
 
